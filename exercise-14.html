@@ -12,7 +12,11 @@
   </body>
   <script>
     function init() {
-      const loggedIn = getLogin();
+      const loggedIn = getLogin(); 
+      if(loggedIn == true){
+        const name = askFullName();
+        alert(`Welcome ${name}!`);
+      }
     }
     init();
     function getLogin() {

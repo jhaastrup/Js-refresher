@@ -10,13 +10,13 @@
     <h1>Reusable Code Exercises</h1>
     <p>Open the web inspector console to test.</p>
   </body>
-  <script>
-    function getArticleMarkup(title, url, excerpt, author) {
-      let markup = getHeaderLinkMarkup(title, url);
+  <script> 
+  const getArticleMarkup = (title, url,excerpt,author) =>{
+    let markup = getHeaderLinkMarkup(title, url);
       markup += getExcerptMarkup(excerpt);
       markup += getAuthorMarkup(author);
       return markup;
-    }
+  }
     console.log(
       getArticleMarkup(
         `JavaScript Explained`,
@@ -25,21 +25,22 @@
         `Zac Gordon`
       )
     );
-    function getExcerptMarkup(excerpt) {
+    const getExcerptMarkup = (excerpt)=>{
       return `<div class="excerpt"><p>${excerpt}</p></div>`;
     }
-    function getAuthorMarkup(author) {
+
+    const getAuthorMarkup = (author) => {
       return `<p>By: ${author}</p>`;
     }
-    function getHeaderLinkMarkup(title, url) {
+    const getHeaderLinkMarkup = (title, url)=> {
       const link = getMyLinkMarkup(title, url);
       const header = getMyHeaderMarkup(link);
       return header;
     }
-    function getMyLinkMarkup(title, url) {
+    const getMyLinkMarkup = (title, url)=>{
       return `<a href="${url}">${title}</a>`;
     }
-    function getMyHeaderMarkup(title) {
+    const  getMyHeaderMarkup=(title) =>{
       return `<h1>${title}</h1>`;
     }
   </script>

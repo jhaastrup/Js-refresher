@@ -12,5 +12,16 @@
   </body>
   <script>
     // Place your code below this line, before the closing script tag
+    function getLogin(){
+      const password = prompt(`Enter a password`);
+      if(password == "password"){
+        alert("Thank you, you are logged in!")
+        return true
+      }else {
+        alert("Incorrect bish try again!");
+        return false
+      }
+    }
+    console.log(getLogin())
   </script>
 </html>
