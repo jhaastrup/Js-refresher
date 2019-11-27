@@ -14,15 +14,16 @@
     const user = {
       id: 1,
       username: `yourusername`,
-      loggedIn: true
-    };
-    function sayHi(user) {
+      loggedIn: true,
+      sayHi: function sayHi() {
       if (user.loggedIn == true) {
         console.log(`Hi ${user.username}!`);
       } else {
         console.log(`Please login!`);
       }
     }
-    sayHi(user);
+    };
+   
+  user.sayHi()
   </script>
 </html>

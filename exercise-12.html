@@ -15,7 +15,12 @@
       notice: `This is a notice.`,
       error: `An error occured!`,
       success: `Success!`
-    };
+    }; 
+
+    getMessage = (type) =>{
+      return message[type];
+    }
+    console.log(getMessage(`notice`));
 
     // Place your code below this line, before the closing script tag
   </script>

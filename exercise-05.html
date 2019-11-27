@@ -21,8 +21,12 @@
         } else {
           console.log(`Please login!`);
         }
+      } ,
+      sayHiWithThis: function(){
+        console.log(`Hi ${this.username}`)
       }
     };
     user.sayHi();
+    user.sayHiWithThis();
   </script>
 </html>

@@ -17,5 +17,14 @@
       loggedIn: true
     };
     // Place your code below this line, before the closing script tag
+    const sayHi =(user) =>{
+      if(user.loggedIn == true){
+       console.log(`Hi ${user.username}`)
+     }else{
+       console.log("Login bish")
+     }
+
+    }
+    sayHi(user);
   </script>
 </html>

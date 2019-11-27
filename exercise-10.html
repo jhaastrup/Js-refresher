@@ -16,9 +16,17 @@
       title: `JavaScript Explained`,
       url: `https://javascriptexplained.com/`,
       excerpt: `Lorem ipsum excerpt.`
-    };
+    }; 
 
     // Place your code below this line, before the closing script tag
+
+    getPostMarkup = (post) =>{
+     let markup = `<article id="${post.id}">`;
+     markup+= getHeaderMarkup(post)
+     markup += getExcerptMarkup(post);
+     markup += `</article>`;
+     return markup;
+    }
 
     function getExcerptMarkup(post) {
       let markup = `<div class="excerpt>`;

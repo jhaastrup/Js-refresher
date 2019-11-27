@@ -11,11 +11,18 @@
     <p>Open the web inspector console to test.</p>
   </body>
   <script>
-    const message = {
+    // Place your code below this line, before the closing script tag 
+    getMessageMarkup = (type) =>{
+      const message = {
       notice: `This is a notice.`,
       error: `An error occured!`,
       success: `Success!`
-    };
-    // Place your code below this line, before the closing script tag
+    }
+    let markup = `<div class="message ${type}">`;
+      markup += message[type];
+      markup += `</div>`;
+      return markup;
+    }
+    console.log(getMessageMarkup(`error`));
   </script>
 </html>

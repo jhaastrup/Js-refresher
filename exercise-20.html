@@ -32,5 +32,17 @@
       }
     ];
     // Place your code below this line, before the closing script tag
+    getPostMarkup = (posts) =>{
+      let markup = `<div class="posts">`;
+      posts.map(post => {
+        markup += `<article class="post-${post.id}">`;
+        markup += `<h2>${post.title}</h2>`;
+        markup += `<p>${post.excerpt}</p>`;
+        markup += `</article>`;
+      });
+      markup += `</div>`;
+      return markup;
+    }
+    console.log(getPostMarkup(posts))
   </script>
 </html>

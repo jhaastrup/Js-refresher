@@ -16,5 +16,13 @@
       url: `https://javascriptexplained.com/`
     };
     // Place your code below this line, before the closing script tag
+   const  getHeaderMarkup = (post)=>{
+      let markup = `<h1>`;
+      markup += `<a href="${post.url}">`;
+      markup += post.title;
+      markup += `</a></h1>`;
+      return markup;
+    } 
+    console.log(getHeaderMarkup(post))
   </script>
 </html>

@@ -12,5 +12,16 @@
   </body>
   <script>
     // Place your code below this line, before the closing script tag
+    const getUserInfo = () =>{
+      const user ={
+        username:"",
+        password:""
+      }
+       user.username = prompt("enter a username");
+       user.password = prompt("enter your password");
+       return user;
+      
+    }
+    console.log(getUserInfo())
   </script>
 </html>
