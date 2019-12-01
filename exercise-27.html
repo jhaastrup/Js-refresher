@@ -44,6 +44,7 @@
     const jsArticles = posts.filter(post => post.cats.includes(`js`));
 
     // Place your code below this line, before the closing script tag
+    const nonJSArticles = posts.filter(post => !post.cats.includes(`js`));
 
     function getPostMarkup(posts) {
       let markup = `<div class="posts">`;
